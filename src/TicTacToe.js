@@ -7,9 +7,16 @@ function TicTacToe() {
 
   const [board, setBoard] = useState(emptyBoard);
   const [currentPlayer, setCurrentPlayer] = useState("O");
-  const [winner, setWinner] = useState();
+  const [winner, setWinner] = useState(null);
 
   const handleCellClick = (index) => {
+
+    if (winner) {
+      window.alert("Jogo finalizado");
+      return null;
+
+    }
+
     if(board[index] !== "") return (window.alert("Posição ocupada"));
 
     setBoard(board.map((item, itemIndex) => itemIndex === index ? currentPlayer : item)
@@ -32,17 +39,29 @@ function TicTacToe() {
     ];
 
     possibleWaysToWin.forEach(cells => {
-        if (cells.every(cell => cell === "O")) setWinner("X")
-        if (cells.every(cell => cell === "X")) setWinner("O")O
+    if (cells.every(cell => cell === "O")) setWinner("X"); 
+    if (cells.every(cell => cell === "X")) setWinner("O");
     });
+
+  checkDrawn();
   }
-  useEffect(checkWinner, [board]);
-  
+
+  const checkDrawn = () => {
+    if (board.every(item => item !== ""))setWinner("D");
+  }
+
+  useEffect(checkWinner, [board]); 
+  const resetGame = () => {
+    setCurrentPlayer("O");
+    setBoard(emptyBoard);
+    setWinner(null);
+
+  }
 
     return (
   <main>  
     <h1 className="title">Jogo da velha</h1> 
-    <div className="board">
+    <div className={`board ${winner ? "game-over" : " "}`}>
       {board.map((item, index) => (
         <div 
           key={index}
@@ -53,6 +72,22 @@ function TicTacToe() {
         </div>
       ))}
     </div>
+  
+  {winner &&
+   <footer>
+     {winner === "D" ?
+        <h2 className="winner-message">
+          <span className={winner}>Empatou</span>
+        </h2>  
+    :
+        <h2 className="winner-message">
+          <span className={winner}>{winner}</span>  Venceu!
+    </h2> 
+    }  
+
+    <button onClick={resetGame}>Recomeçar o jogo</button>
+   </footer>
+ }
   </main>
   );
 }
