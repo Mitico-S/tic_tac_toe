@@ -39,8 +39,8 @@ function TicTacToe() {
     ];
 
     possibleWaysToWin.forEach(cells => {
-    if (cells.every(cell => cell === "O")) setWinner("X"); 
-    if (cells.every(cell => cell === "X")) setWinner("O");
+    if (cells.every(cell => cell === "O")) setWinner("O"); 
+    if (cells.every(cell => cell === "X")) setWinner("X");
     });
 
   checkDrawn();
