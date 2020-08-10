@@ -49,7 +49,7 @@
     border-radius: 5px;
     font-size: 3rem;
     font-weight: bold;
-    color: #00000000;
+    color: #00000066;
   
     cursor: pointer;
   }
@@ -63,15 +63,12 @@
   }
   
   .cell.O {
-    background-image: url(./nhec.png);
+    background-image: url(./Akali.jpeg);
     background-size: cover;
-    background-color: rgb(58, 58, 58);
   }
   
   .cell.X {
-    background-image: url(./smile.png);
-    background-size: cover;
-    background-color: rgb(226, 222, 222)
+    background-color: var(--X-color);
   }
   
   footer {
