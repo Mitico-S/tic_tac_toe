@@ -22,7 +22,7 @@ function TicTacToe() {
     setBoard(board.map((item, itemIndex) => itemIndex === index ? currentPlayer : item)
     ); 
     setCurrentPlayer(currentPlayer === "X" ? "O" : "X"); 
-    }
+  }
 
   
 

@@ -63,8 +63,7 @@
   }
   
   .cell.O {
-    background-image: url(./Akali.jpeg);
-    background-size: cover;
+    background-color: var(--O-color);
   }
   
   .cell.X {
