@@ -1,7 +1,24 @@
 # [Tic Tac Toe]
 
-Jogo desenvolvido em React.js, um jogo da velha como é conhecido no Brasil, sua lógica foi construida comparando vetores, por exemplo, quando certa ordem acontecesse, um player seria vitorioso.
+Jogo desenvolvido em React.js, um jogo da velha como é conhecido no Brasil, sua lógica foi construida comparando vetores, por exemplo, quando certa ordem acontecesse, um player seria vitorioso.<br>
 
+<center>--Index Screen--</center>
+                  
+![Watch the video](https://raw.githubusercontent.com/joaopealves/tic_tac_toe/master/git_documments/index.JPG)
+
+<center>--Drawn Screen--</center>
+
+![Watch the video](https://raw.githubusercontent.com/joaopealves/tic_tac_toe/master/git_documments/drawn.JPG)
+
+<center>--Win Screen--</center>
+
+![watch the video](https://raw.githubusercontent.com/joaopealves/tic_tac_toe/master/git_documments/new%20game.JPG)
+
+<center>--Occupied position Screen--
+
+![watch the video](https://raw.githubusercontent.com/joaopealves/tic_tac_toe/master/git_documments/occupied%20position.JPG)
+
+</center>
 # Como instalar
 
     # git@github.com:joaopealves/tic_tac_toe.git
